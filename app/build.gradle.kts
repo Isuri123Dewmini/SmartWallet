@@ -60,3 +60,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.viewbinding)
 }
+
+tasks.named("preBuild") {
+    dependsOn(rootProject.tasks.named("startApi"))
+}
