@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AddTransactionActivity">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5"
+        android:fontFamily="sans-serif-medium"
+        android:gravity="center"
+        android:text="Edit Transaction"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- ID Row -->
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID:"
+        android:textColor="#333"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="0dp"
+        android:layout_height="38dp"
+        android:enabled="false"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_card_bg"
+        android:textColor="#666"
+        android:padding="8dp"
+        app:layout_constraintStart_toEndOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Amount -->
+    <EditText
+        android:id="@+id/et_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/amount"
+        android:inputType="numberDecimal"
+        android:background="@drawable/rounded_card_bg"
+        android:textColor="#222"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Description -->
+    <EditText
+        android:id="@+id/et_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/description"
+        android:inputType="text"
+        android:background="@drawable/rounded_card_bg"
+        android:textColor="#222"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Transaction Type -->
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Transaction Type:"
+        android:textColor="#333"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/et_description"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp" />
+
+    <Spinner
+        android:id="@+id/spinner_type"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_card_bg"
+        android:padding="8dp"
+        android:entries="@array/transaction_types"
+        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Category -->
+    <Spinner
+        android:id="@+id/spinner_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_card_bg"
+        android:padding="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Date -->
+    <EditText
+        android:id="@+id/et_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Date"
+        android:focusable="false"
+        android:inputType="none"
+        android:background="@drawable/rounded_card_bg"
+        android:textColor="#222"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/spinner_category"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Apply Button -->
+    <Button
+        android:id="@+id/btnApply"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Apply"
+        android:backgroundTint="#3F51B5"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:cornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/et_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp" />
+
+    <!-- Button Row -->
+    <LinearLayout
+        android:id="@+id/ll_buttons"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        app:layout_constraintTop_toBottomOf="@+id/btnApply"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp">
+
+        <Button
+            android:id="@+id/btnDeleteOnEdit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#AF2F25"
+            android:text="Delete This"
+            android:textColor="#fff"
+            app:cornerRadius="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btnRevert"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="#317334"
+            android:text="Revert"
+            android:textColor="#fff"
+            app:cornerRadius="8dp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

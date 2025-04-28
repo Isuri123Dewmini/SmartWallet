@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Body text: formal, modern, and readable -->
+    <style name="TextAppearance.Body1" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/colorOnBackground</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+    <!-- Caption: subtle, professional -->
+    <style name="TextAppearance.Caption" parent="TextAppearance.MaterialComponents.Caption">
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+    <!-- Headline: bold and formal -->
+    <style name="TextAppearance.Headline" parent="TextAppearance.MaterialComponents.Headline6">
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+</resources>

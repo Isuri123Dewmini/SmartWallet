@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Professional, formal, and vibrant color palette -->
+    <color name="colorPrimary">#1A237E</color> <!-- Deep Indigo -->
+    <color name="colorPrimaryVariant">#3949AB</color> <!-- Lighter Indigo -->
+    <color name="colorSecondary">#00ACC1</color> <!-- Teal -->
+    <color name="colorSecondaryVariant">#00838F</color> <!-- Deep Teal -->
+    <color name="colorAccent">#FFB300</color> <!-- Amber -->
+    <color name="colorBackground">#F5F5F5</color> <!-- Light Gray -->
+    <color name="colorSurface">#FFFFFF</color> <!-- White -->
+    <color name="colorError">#D32F2F</color> <!-- Red -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorOnBackground">#212121</color>
+    <color name="colorOnSurface">#212121</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <!-- Existing colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="Deep_navy_blue">#000052</color>
+    <color name="surface">#0052FF</color>
+    <color name="red">#FF5252</color>
+    <color name="green">#4CAF50</color>
+</resources>

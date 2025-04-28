@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="12dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:strokeColor="#E0E0E0"
+    app:strokeWidth="1dp"
+    android:backgroundTint="#F8FAFC">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="18dp">
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:id="@+id/btnActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnEdit"
+                style="@android:style/Widget.Holo.Light.ImageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/ic_edit"
+                android:backgroundTint="#00B2FF"
+                android:contentDescription="@string/edit_transaction"
+                android:elevation="2dp"
+                android:icon="@drawable/ic_edit"
+                android:text=""
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:strokeColor="#00B2FF"
+                app:strokeWidth="0dp" />
+
+            <ImageButton
+                android:id="@+id/btnDelete"
+                style="@android:style/Widget.Holo.Light.ImageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/ic_delete"
+                android:backgroundTint="#E07D6B"
+                android:contentDescription="@string/delete_transaction"
+                android:elevation="2dp"
+                android:icon="@drawable/ic_delete"
+                android:iconTint="@android:color/white"
+                android:text=""
+                app:cornerRadius="20dp"
+                app:iconGravity="textStart"
+                app:iconPadding="0dp"
+                app:strokeColor="#E07D6B"
+                app:strokeWidth="0dp" />
+        </LinearLayout>
+
+        <!-- Transaction Description -->
+        <TextView
+            android:id="@+id/transactionDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="#222F3E"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btnActions"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            android:layout_marginEnd="12dp"
+            tools:text="Monthly Salary" />
+
+        <!-- Transaction Amount -->
+        <TextView
+            android:id="@+id/transactionAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="#009688"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/btnActions"
+            app:layout_constraintTop_toTopOf="@id/transactionDescription"
+            app:layout_constraintBottom_toBottomOf="@id/transactionDescription"
+            android:layout_marginEnd="12dp"
+            tools:text="+₹3,000.00" />
+
+        <!-- Transaction Category -->
+        <TextView
+            android:id="@+id/transactionCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:textColor="#8395A7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/transactionDescription"
+            android:layout_marginTop="6dp"
+            tools:text="Income" />
+
+        <!-- Transaction Date -->
+        <TextView
+            android:id="@+id/transactionDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextAppearance.Material3.BodySmall"
+            android:textColor="#8395A7"
+            app:layout_constraintEnd_toStartOf="@id/btnActions"
+            app:layout_constraintTop_toBottomOf="@id/transactionAmount"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="12dp"
+            tools:text="Aug 1, 2023" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

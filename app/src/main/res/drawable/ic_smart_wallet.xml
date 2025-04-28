@@ -1,0 +1,59 @@
+<!-- res/drawable/ic_smart_wallet_professional.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Background Gradient -->
+    <path
+        android:pathData="M0 0H120V120H0z"/>
+
+    <!-- Modern Wallet Icon -->
+    <group android:pivotX="60" android:pivotY="60">
+        <!-- Main Wallet Body with Depth -->
+        <path
+            android:name="wallet_body"
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,45h60c5.5,0 10,4.5 10,10v20c0,5.5 -4.5,10 -10,10H30c-5.5,0 -10,-4.5 -10,-10V55c0,-5.5 4.5,-10 10,-10z"
+            android:strokeWidth="1.5"
+            android:strokeColor="#B3E5FC"/>
+
+        <!-- Dynamic Fold Effect -->
+        <path
+            android:name="wallet_fold"
+            android:fillColor="#E1F5FE"
+            android:pathData="M30,45h60l-15,15H45z"
+            android:strokeWidth="1"
+            android:strokeColor="#81D4FA"/>
+
+        <!-- Security Shield with Gradient -->
+        <path
+            android:name="security_core"
+            android:fillColor="#40C4FF"
+            android:pathData="M60,30l27.5,15v15c0,16.5 -12.5,30 -27.5,30 -15,0 -27.5,-13.5 -27.5,-30V45z">
+            <gradient
+                android:startColor="#40C4FF"
+                android:endColor="#0091EA"
+                android:type="radial"
+                android:gradientRadius="45"
+                android:centerX="0.5"
+                android:centerY="0.3"/>
+        </path>
+
+        <!-- Checkmark Symbol -->
+        <path
+            android:name="security_check"
+            android:fillColor="#FFFFFF"
+            android:pathData="M55,65l10,10 20,-20 -5,-5 -15,15 -5,-5z"
+            android:strokeWidth="0.8"
+            android:strokeColor="#FFFFFF"/>
+
+        <!-- Dynamic Lines (Holo Effect) -->
+        <path
+            android:name="tech_lines"
+            android:strokeColor="#40C4FF"
+            android:strokeWidth="0.7"
+            android:pathData="M45,50h30M45,55h30M45,60h30M45,65h30M45,70h30"/>
+    </group>
+</vector>
